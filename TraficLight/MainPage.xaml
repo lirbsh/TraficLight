@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TraficLight.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:TraficLight.ViewModels"
+    x:DataType="vm:MainPageVM">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="5">
+        <Frame
+            BackgroundColor="Black"
+            CornerRadius="55"
+            HeightRequest="110"
+            WidthRequest="110">
+            <BoxView
+                BackgroundColor="{Binding RedColor}"
+                CornerRadius="50"
+                HeightRequest="100"
+                WidthRequest="100" />
+        </Frame>
+        <Frame
+            Grid.Row="1"
+            BackgroundColor="Black"
+            CornerRadius="55"
+            HeightRequest="110"
+            WidthRequest="110">
+            <BoxView
+                BackgroundColor="{Binding YellowColor}"
+                CornerRadius="50"
+                HeightRequest="100"
+                WidthRequest="100" />
+        </Frame>
+        <Frame
+            Grid.Row="2"
+            BackgroundColor="Black"
+            CornerRadius="55"
+            HeightRequest="110"
+            WidthRequest="110">
+            <BoxView
+                BackgroundColor="{Binding GreenColor}"
+                CornerRadius="50"
+                HeightRequest="100"
+                WidthRequest="100" />
+        </Frame>
+        <Button
+            Grid.Row="3"
+            Margin="10"
+            BackgroundColor="Blue"
+            Command="{Binding ChangeLightCommand}"
+            CornerRadius="25"
+            FontSize="20"
+            Text="Change"
+            TextColor="White" />
+        <Button
+            Grid.Row="4"
+            Margin="10"
+            BackgroundColor="Blue"
+            Command="{Binding AutoChangeCommand}"
+            CornerRadius="25"
+            FontSize="20"
+            Text="{Binding SwitchAutoChangeLightText}"
+            TextColor="White" />
+    </Grid>
+</ContentPage>
