@@ -5,7 +5,7 @@ namespace TraficLight.ModelsLogic
 {
     internal class TraficLight : TraficLightModel
     {
-        public override string SwitchAutoChangeLightText => isAutoChangeLight ? "Stop Auto Change" : "Start Auto Change";
+        public override string SwitchAutoChangeLightText => isAutoChangeLight ? Strings.StopAutoChange : Strings.StartAutoChange;
 
         public TraficLight()
         {
