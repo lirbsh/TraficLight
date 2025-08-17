@@ -6,12 +6,10 @@ namespace TraficLight.ModelsLogic
     internal class TraficLight : TraficLightModel
     {
         public override string SwitchAutoChangeLightText => isAutoChangeLight ? Strings.StopAutoChange : Strings.StartAutoChange;
-
         public TraficLight()
         {
             timer.Elapsed += OnTimeElapsed;
         }
-
         protected override void OnTimeElapsed(object? sender, ElapsedEventArgs e)
         {
             ChangeLight();
@@ -52,7 +50,6 @@ namespace TraficLight.ModelsLogic
                     LightChanged?.Invoke(this, new LightChangedEventArgs((TraficLightModel.TraficLight)i));
             }
         }
-
         internal void SwitchAutoChangeLight()
         {
             if (isAutoChangeLight)

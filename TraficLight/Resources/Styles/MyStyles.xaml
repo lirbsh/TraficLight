@@ -5,7 +5,6 @@
         <GradientStop Offset="0.5" Color="#3a7bd5" />
         <GradientStop Offset="1.0" Color="Purple" />
     </LinearGradientBrush>
-
     <Style ApplyToDerivedTypes="True" TargetType="ContentPage">
         <Setter Property="Background" Value="{StaticResource backgroundBrush}" />
     </Style>
@@ -21,7 +20,6 @@
         <Setter Property="HeightRequest" Value="100" />
         <Setter Property="WidthRequest" Value="100" />
     </Style>
-
     <Style x:Key="MyButtonStyle" TargetType="Button">
         <Setter Property="BackgroundColor" Value="Blue" />
         <Setter Property="TextColor" Value="White" />
