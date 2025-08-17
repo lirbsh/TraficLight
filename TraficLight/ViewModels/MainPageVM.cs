@@ -26,6 +26,7 @@ namespace TraficLight.ViewModels
       
         public Color GreenColor => traficLight.GreenColor;
         public string SwitchAutoChangeLightText => traficLight.SwitchAutoChangeLightText;
+        public string LightImage => traficLight.LightImage;
         public MainPageVM()
         {
             traficLight.LightChanged += OnTraficLightChanged;
@@ -49,7 +50,8 @@ namespace TraficLight.ViewModels
                 case TraficLightModel.TraficLight.Green:
                     OnPropertyChanged(nameof(GreenColor));
                     break;
-            }   
+            } 
+            OnPropertyChanged(nameof(LightImage));
         }
     }
 }

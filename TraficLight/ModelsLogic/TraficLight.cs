@@ -6,6 +6,7 @@ namespace TraficLight.ModelsLogic
     internal class TraficLight : TraficLightModel
     {
         public override string SwitchAutoChangeLightText => isAutoChangeLight ? Strings.StopAutoChange : Strings.StartAutoChange;
+        public override string LightImage => lightImage.GetImage(currentState);
         public TraficLight()
         {
             timer.Elapsed += OnTimeElapsed;

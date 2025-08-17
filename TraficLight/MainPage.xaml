@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:TraficLight.ViewModels"
     x:DataType="vm:MainPageVM">
-    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="5">
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,*" RowSpacing="5">
         <Frame>
             <BoxView BackgroundColor="{Binding RedColor}" />
         </Frame>
@@ -24,5 +24,10 @@
             Grid.Row="4"
             Command="{Binding AutoChangeCommand}"
             Text="{Binding SwitchAutoChangeLightText}" />
+        <Image
+            Grid.Row="5"
+            Source="{Binding LightImage}"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
     </Grid>
 </ContentPage>
