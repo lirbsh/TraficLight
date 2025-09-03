@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:TraficLight.ViewModels"
+    xmlns:m="clr-namespace:TraficLight.Models"
     x:DataType="vm:MainPageVM">
     <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,*" RowSpacing="5">
         <Frame>
@@ -18,7 +19,7 @@
         <Button
             Grid.Row="3"
             Command="{Binding ChangeLightCommand}"
-            Text="Change" 
+            Text="{x:Static m:Strings.Change}" 
             Style="{x:StaticResource MyButtonStyle}"/>
         <Button
             Grid.Row="4"
