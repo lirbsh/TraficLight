@@ -19,9 +19,9 @@ namespace TraficLight.Models
         protected LightImage lightImage = new();
         public enum TraficLight { Red, Yellow, Green }
         public EventHandler<LightChangedEventArgs>? LightChanged;
-        public Color RedColor => lites[0].Color;
-        public Color YellowColor => lites[1].Color;
-        public Color GreenColor => lites[2].Color;
+        public Color RedColor => lites[(int)TraficLight.Red].Color;
+        public Color YellowColor => lites[(int)TraficLight.Yellow].Color;
+        public Color GreenColor => lites[(int)TraficLight.Green].Color;
         public abstract string SwitchAutoChangeLightText{ get; }
         public abstract string LightImage{ get; }
         protected abstract void OnTimeElapsed(object? sender, ElapsedEventArgs e);
